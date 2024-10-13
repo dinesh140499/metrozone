@@ -1,0 +1,61 @@
+<Flex
+          mt={{ base: "15px", lg: "30px" }}
+          flexDirection={{ base: "column", lg: "row" }}
+          bgColor={"#EFEFEF"}
+          border={"1px solid #C8C8C8"}
+          borderBottom={"none"}
+          // alignItems={"center"}
+          gap={{ base: "10px", lg: "15px" }}
+          p={{ base: "10px 10px", lg: "20px 50px" }}
+          borderRadius={"15px 15px 0px 0px"}
+          alignItems={"center"}
+        >
+          <Box>
+            <Text color={"#444444"} fontSize={"17px"} fontWeight={"500"}>
+              On the way to:
+            </Text>
+          </Box>
+          <Flex alignItems={"center"} gap={{ base: "5px", lg: "25px" }}>
+            <Text fontSize={{ base: "15px", lg: "default" }}>
+              Huda city center
+            </Text>
+            <BsArrowRight />
+            <Text fontSize={{ base: "15px", lg: "default" }}>Platform 1</Text>
+
+            {/* Metro Line */}
+
+            {/* {searchData.length !== 0 &&
+              Array.from(new Set(searchData?.data[0]?.Routes.map((cur) => cur.line))).map((cur, index) => {
+                return (
+                  <>
+                    <BsArrowRight key={index} />
+                    <Text
+                      fontSize={{ base: "15px", lg: "default" }}
+                      color={cur?.replace("3", "")?.replace("Line", "")}
+                    >
+                      <Text>{cur?.replace("3", "")?.replace("Line", "")}</Text>
+                    </Text>
+                  </>
+                );
+              }
+              )}
+
+            {/* {Array.from(uniqueLine)?.length > 0 &&
+              Array.from(uniqueLine)?.map((line) => {
+                let {line:metroline}=line
+                return (
+                  <>
+                    <BsArrowRight />
+                    <Text
+                      fontSize={{ base: "15px", lg: "default" }}
+                      color={line}
+                    >
+                      <Text>
+                        {line}
+                      </Text>
+                    </Text>
+                  </>
+                );
+              })} */}
+          </Flex>
+        </Flex>

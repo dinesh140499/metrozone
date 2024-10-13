@@ -1,0 +1,50 @@
+<Box width={{ base: "100%", lg: "auto" }}>
+                    <Button
+                      onClick={() => setToggle(!toggle)}
+                      bg={"#A82724"}
+                      color={"white"}
+                      _active={"#A82724"}
+                      _hover={"#A82724"}
+                    >
+                      <HiSwitchVertical /> Reverse Route
+                    </Button>
+                  </Box>
+                  {/* Route Second */}
+                  <Box
+                    width={{ base: "100%", lg: "30%" }}
+                    display={"flex"}
+                    flexDirection={toggle ? "column" : "column-reverse"}
+                    position={"relative"}
+                  >
+                    {searchData?.length !== 0 && (searchData?.data[0]?.Routes)?.slice(2, -1)?.map((routes, index) => {
+                      return (
+                        <Box
+                          display={"flex"}
+                          key={index}
+                          alignItems={"center"}
+                          justifyContent={"space-between"}
+                          mt={"10px"}
+                        >
+                          <Flex alignItems={"center"} gap={"20px"}>
+                            <TbTopologyStar2
+                              fontSize={"20px"}
+                              color={"#a82724"}
+                            />
+                            <Text
+                              fontWeight={"400"}
+                              // color={"#207AEE"}
+                              fontSize={"17px"}
+                            >
+                              {routes}
+                            </Text>
+                          </Flex>
+                          <AiOutlineArrowUp
+                            fontSize={"1.3rem"}
+                          // color={routes?.line
+                          //   .replace("3", "")
+                          //   .replace("Line", "")}
+                          />
+                        </Box>
+                      );
+                    })}
+                  </Box>
